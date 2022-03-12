@@ -1,0 +1,52 @@
+@use '../../styles/' as *;
+
+.item__pizza {
+	width: 33.33333%;
+	padding-left: 8px;
+	padding-right: 8px;
+	margin-bottom: 1rem;
+
+	.item__block {
+		border-radius: 12px;
+		border: 1px solid $borderPrimary;
+
+		img {
+			border-top-left-radius: 12px;
+			border-top-right-radius: 12px;
+			width: 100%;
+		}
+
+		.item__description {
+			padding: 1rem;
+			.item__name {
+				margin-bottom: 0.8rem;
+			}
+
+			.item__option {
+				margin-bottom: 0.8rem;
+				p {
+					margin-bottom: 0.3rem;
+				}
+
+				.form-control {
+					margin-bottom: 0.5rem;
+				}
+			}
+
+			.item__price {
+				@include flex(center, space-between);
+
+				p {
+					border-radius: 0.35rem;
+					padding: 0.5rem;
+					margin-bottom: 0;
+				}
+
+				p,
+				.button__add {
+					background-color: $colorgrey;
+				}
+			}
+		}
+	}
+}

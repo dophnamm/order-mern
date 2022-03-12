@@ -1,0 +1,45 @@
+@use '../../../../styles/' as *;
+
+.cartItem {
+	@include flex(initial, initial);
+	border: 2px solid $borderPrimary;
+	position: relative;
+	margin-bottom: 1rem;
+
+	&__img {
+		width: 300px;
+	}
+
+	&__info {
+		padding: 1rem;
+	}
+
+	&__name {
+		margin-bottom: 1rem;
+	}
+
+	p {
+		margin-bottom: 0.2rem;
+	}
+
+	&__delete {
+		position: absolute;
+		right: 20px;
+		bottom: 20px;
+		padding: 0.5rem 1rem;
+		border: 1px solid $borderPrimary;
+		@include flex(center, center);
+		transition: all 0.25s ease;
+
+		.icon {
+			margin-right: 0.3rem;
+			font-size: 16px;
+		}
+
+		&:hover {
+			cursor: pointer;
+			background-color: orange;
+			color: white;
+		}
+	}
+}

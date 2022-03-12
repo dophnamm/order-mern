@@ -1,0 +1,45 @@
+@use '../../styles/' as *;
+
+.category__container {
+	display: flex;
+	align-items: center;
+
+	.button__filter {
+		background-color: $borderPrimary;
+		margin-right: 2rem;
+	}
+
+	.button-category {
+		&:nth-of-type(3n + 1) {
+			background-color: $orangeLight;
+		}
+
+		&:nth-of-type(3n + 2) {
+			background-color: $purpleLight;
+		}
+
+		&:nth-of-type(3n + 3) {
+			background-color: $pinkLight;
+		}
+
+		&:nth-of-type(3n + 4) {
+			background-color: $greenLight;
+		}
+	}
+
+	.button-category {
+		display: flex;
+		align-items: center;
+		margin-right: 1rem;
+	}
+
+	.category__image {
+		width: 20px;
+		height: 20px;
+		margin-right: 0.5rem;
+	}
+
+	.category__name {
+		font-size: 13px;
+	}
+}

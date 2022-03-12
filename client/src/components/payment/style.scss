@@ -1,0 +1,7 @@
+@use '../../styles/' as *;
+
+.payment {
+	&__container {
+		border: 1px solid $borderPrimary;
+	}
+}

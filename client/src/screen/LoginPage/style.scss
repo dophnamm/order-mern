@@ -1,0 +1,28 @@
+@use '../../styles/' as *;
+
+.login {
+	min-height: 80vh;
+	display: grid;
+	place-items: center;
+
+	h1 {
+		display: block;
+		text-align: center;
+		font-size: 100px !important;
+		margin-bottom: 2rem;
+	}
+
+	.login__container {
+		width: 600px;
+		margin: 0 auto;
+	}
+
+	.text-muted {
+		text-decoration: underline;
+		transition: all 0.25s ease;
+
+		&:hover {
+			color: $mainColor !important;
+		}
+	}
+}

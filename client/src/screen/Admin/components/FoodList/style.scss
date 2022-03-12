@@ -1,0 +1,21 @@
+@use '../../../../styles/' as *;
+
+.loading {
+	width: 100%;
+	display: grid;
+	place-items: center;
+}
+
+.custom-td {
+	text-align: center;
+	height: 100%;
+
+	svg {
+		margin: 0 0.5rem;
+		font-size: 20px;
+		&:hover {
+			cursor: pointer;
+			color: $mainColor;
+		}
+	}
+}

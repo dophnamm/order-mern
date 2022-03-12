@@ -1,0 +1,78 @@
+@use '../../styles/' as *;
+
+#header {
+	border-bottom: 1px solid $borderPrimary;
+	padding: 1rem 0;
+	margin-bottom: 30px;
+	position: sticky;
+	top: 0;
+	background-color: white;
+	z-index: 1000;
+
+	.header__container {
+		@include flex(center, space-between);
+
+		.header__logo {
+			span {
+				color: $mainColor;
+			}
+		}
+
+		.header__search {
+			flex: 1;
+			margin: 0 2rem;
+			display: flex;
+			align-items: center;
+			padding: 0.5rem 2rem;
+			position: relative;
+
+			form {
+				flex: 1;
+				border-bottom: 1px solid $borderPrimary;
+
+				.search-input {
+					width: 80%;
+					height: 28px;
+					margin-left: 0.5rem;
+					font-size: 12px;
+				}
+			}
+		}
+
+		.header__navigation {
+			width: 250px;
+			@include flex(center, space-between);
+
+			.navigation-cart {
+				position: relative;
+
+				span {
+					content: '';
+					position: absolute;
+					width: 16px;
+					height: 16px;
+					background-color: $mainColor;
+					color: $textColor;
+					font-size: 12px;
+					top: -6px;
+					right: -6px;
+					border-radius: 50%;
+					@include flex(center, center);
+				}
+			}
+
+			.navigation-profile {
+				.btn {
+					background-color: transparent !important;
+					color: black;
+					border: none;
+					box-shadow: none;
+				}
+			}
+		}
+	}
+
+	.header__icon {
+		font-size: 20px;
+	}
+}

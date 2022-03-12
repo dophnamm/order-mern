@@ -1,0 +1,59 @@
+@use '../../../styles/' as *;
+
+.item {
+	width: 33.3333%;
+	padding: 0 4px;
+
+	&:nth-of-type(1) {
+		.block-item {
+			background-color: $orangeLight;
+		}
+	}
+
+	&:nth-of-type(2) {
+		.block-item {
+			background-color: $greenLight;
+		}
+	}
+
+	&:nth-of-type(3) {
+		.block-item {
+			background-color: $pinkLight;
+		}
+	}
+
+	.block-item {
+		margin: 5px;
+		overflow: hidden;
+		position: relative;
+		height: 200px;
+		border-radius: 2rem;
+	}
+
+	&__about {
+		position: absolute;
+		top: 50%;
+		left: 26px;
+		height: 120px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		transform: translateY(-50%);
+	}
+
+	&__title {
+		font-size: 20px;
+	}
+
+	&__coupon {
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	&__img {
+		position: absolute;
+		width: 240px;
+		right: -34px;
+		bottom: -60px;
+	}
+}

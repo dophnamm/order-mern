@@ -1,0 +1,19 @@
+.order_container {
+	min-height: 80vh;
+
+	.loading {
+		height: 100%;
+		display: grid;
+		place-items: center;
+	}
+
+	.order-item {
+		.cartItem__quantity {
+			display: none;
+		}
+
+		.cartItem__delete {
+			display: none;
+		}
+	}
+}

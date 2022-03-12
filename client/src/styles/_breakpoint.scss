@@ -1,0 +1,25 @@
+@use "./variables" as *;
+
+@mixin phone {
+  @media screen and(max-width: $phoneWidth) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and(max-width: $tabletWidth) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and(max-width: $desktopWidth) {
+    @content;
+  }
+}
+
+@mixin lgDesktop {
+  @media only screee and(max-width: $lgDesktop) {
+    @content;
+  }
+} ;
