@@ -42,4 +42,19 @@
 			color: white;
 		}
 	}
+
+	.cartItem__quantity {
+		.quantity__modifier {
+			margin: 0 0.5rem;
+		}
+
+		.quantity__modifier--left,
+		.quantity__modifier--right {
+			padding: 0.2rem 0.4rem;
+			transition: all 0.25s ease;
+			&:hover {
+				opacity: 0.5;
+			}
+		}
+	}
 }

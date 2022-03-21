@@ -3,5 +3,25 @@
 .payment {
 	&__container {
 		border: 1px solid $borderPrimary;
+		@include flex(flex-start, space-between);
+		min-height: 200px;
+		padding: 1rem;
+
+		h4 {
+			margin: 0;
+		}
+	}
+
+	span {
+		float: right;
+		margin-top: 1rem;
+		button {
+			background-color: $mainColor;
+			span {
+				margin: 0;
+				padding: 0.3rem 0.8rem;
+				color: white;
+			}
+		}
 	}
 }

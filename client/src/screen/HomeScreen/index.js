@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getAllFood } from '../../actions/foodAction';
 import Hero from '../../screen/HeroSection/index';
 import HashLoader from 'react-spinners/HashLoader';
+import Footer from '../../components/Footer';
 
 function HomeScreen() {
 	const dispatch = useDispatch();
@@ -57,6 +58,8 @@ function HomeScreen() {
 					</div>
 				</div>
 			</div>
+
+			<Footer />
 		</>
 	);
 }

@@ -1,0 +1,47 @@
+@use '../../styles/' as *;
+
+.footer {
+	padding: 50px 0;
+	background-color: black;
+	margin-top: auto;
+
+	.logo {
+		h1 {
+			text-align: start;
+			color: white;
+			margin-left: 0;
+		}
+		span {
+			color: $mainColor;
+		}
+	}
+
+	.row {
+		border-bottom: 2px solid $colorgrey;
+		position: relative;
+		.col {
+			p {
+				color: #666666;
+			}
+
+			ul {
+				margin-top: 32px;
+				color: white;
+				li {
+					margin-bottom: 0.8rem;
+				}
+			}
+		}
+	}
+
+	.list-social {
+		position: absolute;
+		width: 300px;
+		@include flex(center, space-between);
+		right: 0%;
+		bottom: -55px;
+		li {
+			color: white;
+		}
+	}
+}

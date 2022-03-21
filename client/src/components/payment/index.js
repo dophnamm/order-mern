@@ -13,7 +13,9 @@ function Payment() {
 		<div className='payment'>
 			<h5>Summary</h5>
 
-			<div className='payment__container'>{subTotal}</div>
+			<div className='payment__container'>
+				<h4>Total:</h4> {subTotal}
+			</div>
 
 			<Checkout subTotal={subTotal} />
 		</div>
