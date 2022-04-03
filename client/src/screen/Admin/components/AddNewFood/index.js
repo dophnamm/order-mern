@@ -21,6 +21,7 @@ function AddNewFood() {
 
 	function handleSubmit(e) {
 		e.preventDefault();
+
 		const food = {
 			name,
 			description,
@@ -62,7 +63,7 @@ function AddNewFood() {
 					<Form.Control
 						required
 						type='number'
-						placeholder='Enter small varient price'
+						placeholder='Enter small size price'
 						value={small}
 						onChange={(e) => setSmall(e.target.value)}
 					/>
@@ -72,7 +73,7 @@ function AddNewFood() {
 					<Form.Control
 						required
 						type='number'
-						placeholder='Enter medium varient price'
+						placeholder='Enter medium size price'
 						value={medium}
 						onChange={(e) => setMedium(e.target.value)}
 					/>
@@ -82,7 +83,7 @@ function AddNewFood() {
 					<Form.Control
 						required
 						type='number'
-						placeholder='Enter large varient price'
+						placeholder='Enter large size price'
 						value={large}
 						onChange={(e) => setLarge(e.target.value)}
 					/>
@@ -125,7 +126,7 @@ function AddNewFood() {
 
 			<ToastContainer
 				position='top-right'
-				autoClose={5000}
+				autoClose={1000}
 				hideProgressBar={false}
 				closeOnClick={true}
 				pauseOnHover={true}

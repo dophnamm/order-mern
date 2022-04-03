@@ -13,7 +13,6 @@ export const registerUser = (user) => async (dispatch) => {
 
 export const loginUser = (user) => async (dispatch) => {
 	dispatch({ type: 'USER_LOGIN_REQUEST' });
-
 	try {
 		const response = await axios.post('/api/users/login', user);
 

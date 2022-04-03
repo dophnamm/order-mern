@@ -39,7 +39,7 @@ function Pizza({ pizza }) {
 
 					<div className='item__option'>
 						<div className='item__varient'>
-							<p>Varients</p>
+							<p>Size</p>
 							<select
 								className='form-control'
 								value={varient}
@@ -114,7 +114,7 @@ function Pizza({ pizza }) {
 
 			<ToastContainer
 				position='top-right'
-				autoClose={5000}
+				autoClose={1000}
 				hideProgressBar={false}
 				closeOnClick={true}
 				pauseOnHover={true}

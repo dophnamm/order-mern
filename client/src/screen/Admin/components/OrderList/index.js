@@ -4,6 +4,7 @@ import { getAllOrder } from '../../../../actions/orderAction';
 import HashLoader from 'react-spinners/HashLoader';
 import { Table, Button } from 'react-bootstrap';
 import { deliverOrder } from '../../../../actions/orderAction';
+import { ToastContainer } from 'react-toastify';
 
 function OrderList() {
 	const dispatch = useDispatch();
@@ -13,6 +14,11 @@ function OrderList() {
 	useEffect(() => {
 		dispatch(getAllOrder());
 	}, [dispatch]);
+
+	function handleDeliver(id) {
+		dispatch(deliverOrder(id));
+		dispatch(getAllOrder());
+	}
 
 	return (
 		<>
@@ -47,7 +53,9 @@ function OrderList() {
 										{isDelivered ? (
 											<Button
 												variant='success'
-												disable
+												disable={
+													'true'
+												}
 											>
 												Delivered
 											</Button>
@@ -55,10 +63,8 @@ function OrderList() {
 											<Button
 												variant='secondary'
 												onClick={() =>
-													dispatch(
-														deliverOrder(
-															_id
-														)
+													handleDeliver(
+														_id
 													)
 												}
 											>
@@ -72,6 +78,16 @@ function OrderList() {
 					</tbody>
 				</Table>
 			)}
+
+			<ToastContainer
+				position='top-right'
+				autoClose={1000}
+				hideProgressBar={false}
+				closeOnClick={true}
+				pauseOnHover={true}
+				draggable={true}
+				progress={undefined}
+			/>
 		</>
 	);
 }

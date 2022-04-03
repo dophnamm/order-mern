@@ -5,13 +5,14 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginUser } from '../../actions/userAction';
 import ErrorAlert from '../../components/Error';
+import SuccessAlert from '../../components/Success';
 
 function LoginPage() {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const dispatch = useDispatch();
 	const loginState = useSelector((state) => state.loginReducer);
-	const { loading } = loginState;
+	const { error, success } = loginState;
 
 	useEffect(() => {
 		if (localStorage.getItem('currentUser')) {
@@ -32,7 +33,8 @@ function LoginPage() {
 				<h1>LOGIN</h1>
 
 				<div className='login__container'>
-					{loading && <ErrorAlert text={'Incorrect password or account name'} />}
+					{error && <ErrorAlert text={'Incorrect password or account name'} />}
+					{success && <SuccessAlert text={'Logic successfully'} />}
 
 					<Form typeof='submit'>
 						<Form.Group className='mb-3' controlId='formBasicEmail'>

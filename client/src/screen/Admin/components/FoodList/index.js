@@ -7,6 +7,7 @@ import './style.scss';
 import { BsFillTrash2Fill } from 'react-icons/bs';
 import { FaPencilAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 
 function FoodList() {
 	const dispatch = useDispatch();
@@ -20,9 +21,7 @@ function FoodList() {
 
 	function handleDelete(id) {
 		dispatch(deleteFood(id));
-		setTimeout(() => {
-			window.location.reload();
-		}, 2000);
+		dispatch(getAllFood());
 	}
 
 	return (
@@ -91,6 +90,16 @@ function FoodList() {
 					</tbody>
 				</Table>
 			)}
+
+			<ToastContainer
+				position='top-right'
+				autoClose={1000}
+				hideProgressBar={false}
+				closeOnClick={true}
+				pauseOnHover={true}
+				draggable={true}
+				progress={undefined}
+			/>
 		</div>
 	);
 }

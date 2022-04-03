@@ -12,8 +12,7 @@ function HomeScreen() {
 	const dispatch = useDispatch();
 	const foodState = useSelector((state) => state.getAllFoodRuducer);
 
-	const { food, loading } = foodState;
-
+	const { food = [], loading } = foodState;
 	useEffect(() => {
 		dispatch(getAllFood());
 	}, [dispatch]);
@@ -37,9 +36,7 @@ function HomeScreen() {
 											color='#FFA518'
 										/>
 									</div>
-								) : (
-									food &&
-									food.length > 0 &&
+								) : food && food.length > 0 ? (
 									food.map((pizza, index) => {
 										return (
 											<Pizza
@@ -52,6 +49,8 @@ function HomeScreen() {
 											/>
 										);
 									})
+								) : (
+									<h1>No data</h1>
 								)}
 							</div>
 						</div>

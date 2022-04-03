@@ -1,7 +1,7 @@
 import React from 'react';
 import { Alert } from 'react-bootstrap';
 
-function Success({ text }) {
+function SuccessAlert({ text }) {
 	return (
 		<div>
 			<Alert variant={'success'}>{text}</Alert>
@@ -9,4 +9,4 @@ function Success({ text }) {
 	);
 }
 
-export default Success;
+export default SuccessAlert;
